@@ -83,7 +83,7 @@ This is the bus application (spring boot) that has a controller, BusCtrl. This s
 7. Type ‘**cd**’ and press **Enter**.   
 8. Type **cd $BUSSPRINGBOOT**, Press **Enter**.  
 9. Now start the spring boot service by giving the command: **mvn spring-boot:run**.  
-10. Go to browser/new tab and type **http://address of your instance:8111/bus/Central_station/60**.  
+10. Go to browser/new tab and type **http://(address of your instance):8111/bus/Central_station/60**.  
 
 ##Class WhenComesTheBus.java (Client)  
 We can now write out client side test.    
