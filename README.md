@@ -2,7 +2,7 @@
 ## **DevOps Playground: Hands on with Contract Testing using Pact**
 ![](Images/Pactlogo.png) 
 
-#Introduction
+## **Introduction** 
 On this meetup, we will walk you through what Contract testing. We will explain how PACT works and do a hands-on workshop creating a pact between two micro services and testing it.
 
 Name: Samer Naqvi
@@ -12,7 +12,7 @@ Email: Samer.Naqvi@ecs-digital.co.uk
 
 LinkedIn: [Let's connect](https://www.linkedin.com/in/samer-naqvi-8b27a3/)
 
-#Requirements
+## **Requirements** . 
 •	Jdk 
 
 •	Code editor (e.g. Eclipse, Vi) basic knowledge
@@ -27,11 +27,11 @@ LinkedIn: [Let's connect](https://www.linkedin.com/in/samer-naqvi-8b27a3/)
 
 •	Basic Linux cli knowledge
 
-#Setup
+## **Setup** . 
 The remote machine will have all the programs you need to follow this session. On a new tab, please open Remote Machine to launch the login screen to connect to the test machines. For any technical assistance, please ask around for help.
 If you wish to use your own machine on this playground, please make sure you have all the applications and/or programs listed on the requirements and clone or download this repository.
 
-#Further Reading
+## **Further Reading** 
 •	[Official Pact Documentation](https://docs.pact.io/)
 
 •	[Contract Tests vs Functional Tests](https://docs.pact.io/best_practices/consumer/contract_tests_not_functional_tests)
@@ -42,7 +42,7 @@ If you wish to use your own machine on this playground, please make sure you hav
 
 •	[Pact Broker](https://github.com/pact-foundation/pact-broker-docker)
 
-#Survey Link
+## **Survey Link** . 
 We would love to hear your feedback and make improvements on the way we deliver our playground session. Please click the survey to participate.
 
 
@@ -50,7 +50,7 @@ We would love to hear your feedback and make improvements on the way we deliver 
 
 
 
-#Pact Project 
+## **Pact Project**  
 Once you are successfully logged in to your instance, follow the steps below to open the project.
 
 1. On the terminal write ‘ls’ and press Enter, to make sure your Pact project is present. 
@@ -85,7 +85,7 @@ This is the bus application (spring boot) that has a controller, BusCtrl. This s
 9. Now start the spring boot service by giving the command: **mvn spring-boot:run**.  
 10. Go to browser/new tab and type **http://(address of your instance):8111/bus/Central_station/60**.  
 
-##Class WhenComesTheBus.java (Client)  
+## **Class WhenComesTheBus.java (Client)**    
 We can now write out client side test.    
 11. Open a new tab in your browser and enter address of your linux instance again and log in.  
 12.	Copy paste **cd $BUSCOMES**. Click **Enter**.  
@@ -104,7 +104,7 @@ This class uses port 8111 as default port. It has the method checkEta() that che
 
 ![](Images/WhenComesTheBusResult.png) 
 
-#Pact Test WhenComesTheBusTest.java
+## **Pact Test WhenComesTheBusTest.java**  
 Ok let’s now create the pact file.  The test that we are going to write is based on an example I picked from pact-jvm.  
 20.	Let’s clear the path by typing **cd** and then **Enter**.  
 21.	Now let’s write our test class WhenComesTheBusTest.java. I have already created a shell class for that. Type in **cd $BUSTEST**, press **Enter**.  
@@ -160,12 +160,12 @@ In the **@PactVerification()** method, we first set the root directory for the p
 ![](Images/WhenComesTheBusTestResult.png)  
 27.	By running the above pact test will create a json pact file in the location **/PactTest/client/target/pacts**.  
 28.	Once you’re in that directory, type the command **vi BusServiceClient-BusService.json**.  
-#Pact File  
+## **Pact File** .   
 29.	By entering the command in the above step, you will see the json pact file in vi editor.  
 ![](Images/PactFile.png)  
 You can see in the above json file that it is a pact between provider **BusService** and a consumer **BusServiceClient**. It contains the description, request method, path, the response and the body. A bit further down there are the **matchingRules**, which verifies that the station and nr matches type and the eta should be of type integer. We have also **providerStates**, which can be used for a test on the provider side.  
 30.	Type  ‘ **:q**  ‘ and press **Enter** to exit the vi editor.  
-#Pact Broker 
+## **Pact Broker**   
 We will be using a docker pact broker. I have used an existing pack broker. Lets start the pack broker which is on a docker compose  
 31.	Type ‘ **cd** ‘ and **Enter** to go to root directory.   
 32.	Type **cd $BROKER**.  
@@ -181,7 +181,7 @@ We will be using a docker pact broker. I have used an existing pack broker. Lets
 40.	The above command should verify your pact file on your pact broker. Refresh the tab on which your pack broker is running and it should display the last verified time.   
 If you click the link **BusServiceClient**, you will be displayed a graphical image of the BusServiceClient relationship with any other service. 
 ![](Images/Images/PactbrokerNetwork.png)  
-#BusStopContractTest (Provider)
+## **BusStopContractTest (Provider)**  
 We run BusStroContractTest.java class to verify that our live system works according to the client specification/contract that is created.  
 41.	Go back to the parent working directory by typing ‘**cd**’ and press **Enter**.  
 42.	Type **cd $VERIFY** and press **Enter**.  
