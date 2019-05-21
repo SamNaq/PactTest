@@ -5,7 +5,8 @@
 ## **Introduction** 
 On this meetup, we will walk you through what Contract testing. We will explain how PACT works and do a hands-on workshop creating a pact between two micro services and testing it.
 
-Name: Samer Naqvi
+Name: Samer Naqvi  
+
 Role: Continuous Delivery Consultant
 
 Email: Samer.Naqvi@ecs-digital.co.uk
